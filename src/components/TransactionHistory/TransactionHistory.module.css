@@ -1,0 +1,28 @@
+table,
+th,
+td {
+  border: 2px solid rgb(16, 15, 15);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.captur {
+  background-color: rgb(18, 19, 19);
+  color: white;
+}
+.containerTable {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.trData {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(182, 179, 179);
+}
