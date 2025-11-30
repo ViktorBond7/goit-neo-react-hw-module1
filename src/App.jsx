@@ -8,15 +8,17 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 const App = () => {
   return (
     <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      {Object.keys(userData).length !== 0 && (
+        <Profile
+          name={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          image={userData.avatar}
+          stats={userData.stats}
+        />
+      )}
+      {friends.length > 0 && <FriendList friends={friends} />}
+      {transactions.length > 0 && <TransactionHistory items={transactions} />}
     </>
   );
 };
